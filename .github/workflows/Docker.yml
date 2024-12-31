@@ -39,7 +39,6 @@ jobs:
         with:
           push: true
           tags: "${{ env.IMAGE_NAME }}:${{ steps.version.outputs.prefixed-v-version }}"
-          file: GluetunExtendarr.Console/Dockerfile
           context: .
 
       - name: Create Tag
