@@ -1,0 +1,15 @@
+name: ip-info-dev
+networks:
+  internal-network:
+    driver: bridge
+    internal: true  # This makes the network isolated from external access
+
+services:
+  ip-info:
+    container_name: ip-info-dev
+    environment:
+      INTERVAL: 10
+    build:
+      context: .
+    networks:
+      - internal-network
